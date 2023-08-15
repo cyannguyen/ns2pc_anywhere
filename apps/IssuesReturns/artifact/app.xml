@@ -535,7 +535,7 @@
 						<text required="true" editable="false" id="IssuesReturns.AdditionalItemsDetailsView_costCode" label="Inventory Cost Code" lookup="IssuesReturns.CostCodeLookup" lookupAttribute="costCode" placeHolder="Tap to enter" resourceAttribute="costCode"/>
 					</groupitem>
 					<groupitem id="IssuesReturns.IAdditionalItemsDetailsView_deptCostCode">
-						<text required="true" editable="false" id="IssuesReturns.AdditionalItemsDetailsView_deptCostCode" label="Reason Code" lookup="IssuesReturns.DeptCostCodeLookup" lookupAttribute="deptCostCode" placeHolder="Tap to enter" resourceAttribute="deptCostCode"/>
+						<text required="true" editable="false" id="IssuesReturns.AdditionalItemsDetailsView_deptCostCode" label="Department Cost Code" lookup="IssuesReturns.DeptCostCodeLookup" lookupAttribute="deptCostCode" placeHolder="Tap to enter" resourceAttribute="deptCostCode"/>
 					</groupitem>
 					<!-- Tuan-out: add new fields -->
 					<groupitem id="IssuesReturns.IAdditionalItemsDetailsView_task_groupitem_4">
