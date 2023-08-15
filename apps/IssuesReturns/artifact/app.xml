@@ -789,7 +789,50 @@
 
 	<!--DATA DEFINITION SECTION-->
 	<data id="data">	
-		
+		<!-- Tuan-in: add resource to lookup reseaon code -->
+		<!-- ALN Domain resource -->
+		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#Location" id="domainReasonCode" name="additionallocations" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
+			<attributes id="domainReasonCode_attributes">
+				<attribute describedByProperty="spi:description" id="domainReasonCode_description_spidescription" index="true" isExactMatchIndex="true" name="description"/>
+				<attribute describedByProperty="spi:value" id="domainReasonCode_value_spivalue" index="true" isExactMatchIndex="true" name="value"/>
+				<attribute describedByProperty="spi:domainid" id="domainReasonCode_domainid_domainid" index="true" isExactMatchIndex="true" name="domainid"/>
+			</attributes>
+			<queryBases id="domainReasonCode_queryBases">
+				<queryBase id="domainReasonCode_queryBase_getDomainReasonCode" name="getDomainReasonCode" queryUri="/oslc/os/oslcalndomain"/>
+			</queryBases>
+			<whereClause clause="spi:domainid='CT_REASONCODE'" id="domainReasonCode_whereClause"/>
+		</resource>
+		<!-- Tuan-in: add resource to lookup reseaon code -->
+
+		<!-- Tuan-in: add resource to lookup reseaon code -->
+		<!-- ALN Domain resource -->
+		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#Location" id="domainCostCode" name="additionallocations" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
+			<attributes id="domainCostCode_attributes">
+				<attribute describedByProperty="spi:description" id="domainCostCode_description_spidescription" index="true" isExactMatchIndex="true" name="description"/>
+				<attribute describedByProperty="spi:value" id="domainCostCode_value_spivalue" index="true" isExactMatchIndex="true" name="value"/>
+				<attribute describedByProperty="spi:domainid" id="domainCostCode_domainid_domainid" index="true" isExactMatchIndex="true" name="domainid"/>
+			</attributes>
+			<queryBases id="domainCostCode_queryBases">
+				<queryBase id="domainCostCode_queryBase_getDomainCostCode" name="getDomainCostCode" queryUri="/oslc/os/oslcalndomain"/>
+			</queryBases>
+			<whereClause clause="spi:domainid='CT_COSTCODE'" id="domainCostCode_whereClause"/>
+		</resource>
+		<!-- Tuan-in: add resource to lookup reseaon code -->
+
+		<!-- Tuan-in: add resource to lookup reseaon code -->
+		<!-- ALN Domain resource -->
+		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#Location" id="domainDeptCostCode" name="additionallocations" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
+			<attributes id="domainDeptCostCode_attributes">
+				<attribute describedByProperty="spi:description" id="domainDeptCostCode_description_spidescription" index="true" isExactMatchIndex="true" name="description"/>
+				<attribute describedByProperty="spi:value" id="domainDeptCostCode_value_spivalue" index="true" isExactMatchIndex="true" name="value"/>
+				<attribute describedByProperty="spi:domainid" id="domainDeptCostCode_domainid_domainid" index="true" isExactMatchIndex="true" name="domainid"/>
+			</attributes>
+			<queryBases id="domainDeptCostCode_queryBases">
+				<queryBase id="domainDeptCostCode_queryBase_getDomainDeptCostCode" name="getDomainDeptCostCode" queryUri="/oslc/os/oslcalndomain"/>
+			</queryBases>
+			<whereClause clause="spi:domainid='CT_DEPTCOSTCODE'" id="domainDeptCostCode_whereClause"/>
+		</resource>
+		<!-- Tuan-in: add resource to lookup reseaon code -->
   		<resource id="issuesReturnsResource" inMemory="true" name="issuesReturns" singleton="true">
 			<attributes id="issuesReturns_attributes">			
 				<localAttribute dataType="string" id="issuesReturns_siteid_string" name="siteid"/>
