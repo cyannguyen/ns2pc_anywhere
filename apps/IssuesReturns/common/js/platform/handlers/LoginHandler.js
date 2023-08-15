@@ -85,6 +85,12 @@ function(declare, ApplicationHandlerBase, AdditionalDataManager, SystemDataManag
 				loginForm.set(authkey1, null);
 				loginForm.set(authkey2, null);
 			}
+
+			// Tuan-in: Set default login
+			loginForm.set(authkey1, "maxadmin");
+			loginForm.set(authkey2, "Avenue@NS2PC2022");
+			// Tuan-in: Set default login
+			
 			var appName = MessageService.createStaticMessage('applicationName').getMessage();
 			appName = appName == 'applicationName' ? '' : appName;
 			loginForm.set('appName', decodeURIComponent(appName)); // use decodeURIComponent to support multiple line app name
