@@ -527,6 +527,17 @@
 							</eventHandlers>
 						</text>
 					</groupitem>
+					<!-- Tuan-in: add new fields -->
+					<groupitem id="IssuesReturns.IAdditionalItemsDetailsView_reasonCode">
+						<text required="true" editable="false" id="IssuesReturns.AdditionalItemsDetailsView_reasonCode" label="Reason Code" lookup="IssuesReturns.ReasonCodeLookup" lookupAttribute="reasonCode" placeHolder="Tap to enter" resourceAttribute="reasonCode"/>
+					</groupitem>
+					<groupitem id="IssuesReturns.IAdditionalItemsDetailsView_costCode">
+						<text required="true" editable="false" id="IssuesReturns.AdditionalItemsDetailsView_costCode" label="Inventory Cost Code" lookup="IssuesReturns.CostCodeLookup" lookupAttribute="costCode" placeHolder="Tap to enter" resourceAttribute="costCode"/>
+					</groupitem>
+					<groupitem id="IssuesReturns.IAdditionalItemsDetailsView_deptCostCode">
+						<text required="true" editable="false" id="IssuesReturns.AdditionalItemsDetailsView_deptCostCode" label="Reason Code" lookup="IssuesReturns.DeptCostCodeLookup" lookupAttribute="deptCostCode" placeHolder="Tap to enter" resourceAttribute="deptCostCode"/>
+					</groupitem>
+					<!-- Tuan-out: add new fields -->
 					<groupitem id="IssuesReturns.IAdditionalItemsDetailsView_task_groupitem_4">
 						<text editable="false" id="IssuesReturns.AdditionalItemsDetailsView_task" label="Task ID" lookup="IssuesReturns.TaskLookup" lookupAttribute="taskid" placeHolder="Tap to enter" resourceAttribute="taskid"/>
 					</groupitem>
@@ -787,6 +798,27 @@
 			</returnAttributes>
 		</lookup>
 
+		<!-- IssueTo lookup -->
+
+		<!-- Tuan-in: add reason code lookup -->
+		<!-- ReasonCode lookup -->
+		<lookup id="IssuesReturns.ReasonCodeLookup" label="Select Person">
+			<requiredResources id="IssuesReturns.ReasonCodeLookup_requiredResources">
+				<requiredResource id="IssuesReturns.ReasonCodeLookup_workOrder" name="domainReasonCode" reload="true"/>
+			</requiredResources>
+			<list id="IssuesReturns.ReasonCodeLookup_list" resource="domainReasonCode">
+				<listItemTemplate id="IssuesReturns.ReasonCodeLookup_listItemTemplate_Item1Desc1" layout="Item1Desc1">
+					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.ReasonCodeLookup_Item1Desc1_value" layoutInsertAt="item1" resourceAttribute="value"/>
+					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.ReasonCodeLookup_Item1Desc1_description" layoutInsertAt="desc1" resourceAttribute="description"/>
+				</listItemTemplate>
+			</list>
+
+			<returnAttributes id="IssuesReturns.ReasonCodeLookup_returnAttributes">
+				<returnAttribute id="IssuesReturns.ReasonCodeLookup_personid" sourceAttribute="value" targetAttribute="reasonCode"/>
+			</returnAttributes>
+		</lookup>
+		<!-- Tuan-out: add reason code lookup -->
+
 		<!-- Tuan-in: add inventory cost code lookup -->
 		<!-- CostCode lookup -->
 		<lookup id="IssuesReturns.CostCodeLookup" label="Select Person">
@@ -794,10 +826,6 @@
 				<requiredResource id="IssuesReturns.CostCodeLookup_workOrder" name="domainCostCode" reload="true"/>
 			</requiredResources>
 			<list id="IssuesReturns.CostCodeLookup_list" resource="domainCostCode">
-				<searchAttributes id="IssuesReturns.CostCodeLookupy_searchAttributes">
-					<searchAttribute id="IssuesReturns.CostCodeLookup_searchAttribute_value" name="value"/>
-					<searchAttribute id="IssuesReturns.CostCodeLookup_searchAttribute_itemdesc" name="description"/>
-				</searchAttributes>
 				<listItemTemplate id="IssuesReturns.CostCodeLookup_listItemTemplate_Item1Desc1" layout="Item1Desc1">
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.CostCodeLookup_Item1Desc1_value" layoutInsertAt="item1" resourceAttribute="value"/>
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.CostCodeLookup_Item1Desc1_description" layoutInsertAt="desc1" resourceAttribute="description"/>
@@ -805,7 +833,7 @@
 			</list>
 
 			<returnAttributes id="IssuesReturns.CostCodeLookup_returnAttributes">
-				<returnAttribute id="IssuesReturns.CostCodeLookup_personid" sourceAttribute="value" targetAttribute="value"/>
+				<returnAttribute id="IssuesReturns.CostCodeLookup_personid" sourceAttribute="value" targetAttribute="costCode"/>
 			</returnAttributes>
 		</lookup>
 		<!-- Tuan-out: add inventory cost code lookup -->
@@ -817,10 +845,6 @@
 				<requiredResource id="IssuesReturns.DeptCostCodeLookup_workOrder" name="domainDeptCostCode" reload="true"/>
 			</requiredResources>
 			<list id="IssuesReturns.DeptCostCodeLookup_list" resource="domainDeptCostCode">
-				<searchAttributes id="IssuesReturns.DeptCostCodeLookupy_searchAttributes">
-					<searchAttribute id="IssuesReturns.DeptCostCodeLookup_searchAttribute_value" name="value"/>
-					<searchAttribute id="IssuesReturns.DeptCostCodeLookup_searchAttribute_itemdesc" name="description"/>
-				</searchAttributes>
 				<listItemTemplate id="IssuesReturns.DeptCostCodeLookup_listItemTemplate_Item1Desc1" layout="Item1Desc1">
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.DeptCostCodeLookup_Item1Desc1_value" layoutInsertAt="item1" resourceAttribute="value"/>
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.DeptCostCodeLookup_Item1Desc1_description" layoutInsertAt="desc1" resourceAttribute="description"/>
@@ -828,21 +852,23 @@
 			</list>
 
 			<returnAttributes id="IssuesReturns.DeptCostCodeLookup_returnAttributes">
-				<returnAttribute id="IssuesReturns.DeptCostCodeLookup_personid" sourceAttribute="value" targetAttribute="value"/>
+				<returnAttribute id="IssuesReturns.DeptCostCodeLookup_personid" sourceAttribute="value" targetAttribute="deptCostCode"/>
 			</returnAttributes>
 		</lookup>
 		<!-- Tuan-out: add dept cost code lookup -->
+
 	</ui>
 
 	<!--DATA DEFINITION SECTION-->
 	<data id="data">
+
 		<!-- Tuan-in: add resource to lookup reason code -->
 		<!-- ALN Domain resource -->
-		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#Location" id="domainReasonCode" name="domainReasonCode" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
+		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#ALNDOMAIN" additionalData="true" id="domainReasonCode" name="domainReasonCode" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
 			<attributes id="domainReasonCode_attributes">
-				<attribute describedByProperty="spi:description" id="domainReasonCode_description_spidescription" index="true" isExactMatchIndex="true" name="description"/>
-				<attribute describedByProperty="spi:value" id="domainReasonCode_value_spivalue" index="true" isExactMatchIndex="true" name="value"/>
-				<attribute describedByProperty="spi:domainid" id="domainReasonCode_domainid_domainid" index="true" isExactMatchIndex="true" name="domainid"/>
+				<attribute describedByProperty="spi:description" id="domainReasonCode_description_spidescription" name="description"/>
+				<attribute describedByProperty="spi:value" id="domainReasonCode_value_spivalue" name="value"/>
+				<attribute describedByProperty="spi:domainid" id="domainReasonCode_domainid_domainid" name="domainid"/>
 			</attributes>
 			<queryBases id="domainReasonCode_queryBases">
 				<queryBase id="domainReasonCode_queryBase_getDomainReasonCode" name="getDomainReasonCode" queryUri="/oslc/os/oslcalndomain"/>
@@ -853,11 +879,11 @@
 
 		<!-- Tuan-in: add resource to lookup inventory cost code -->
 		<!-- ALN Domain resource -->
-		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#Location" id="domainCostCode" name="domainCostCode" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
+		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#ALNDOMAIN" additionalData="true" id="domainCostCode" name="domainCostCode" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
 			<attributes id="domainCostCode_attributes">
-				<attribute describedByProperty="spi:description" id="domainCostCode_description_spidescription" index="true" isExactMatchIndex="true" name="description"/>
-				<attribute describedByProperty="spi:value" id="domainCostCode_value_spivalue" index="true" isExactMatchIndex="true" name="value"/>
-				<attribute describedByProperty="spi:domainid" id="domainCostCode_domainid_domainid" index="true" isExactMatchIndex="true" name="domainid"/>
+				<attribute describedByProperty="spi:description" id="domainCostCode_description_spidescription" name="description"/>
+				<attribute describedByProperty="spi:value" id="domainCostCode_value_spivalue" name="value"/>
+				<attribute describedByProperty="spi:domainid" id="domainCostCode_domainid_domainid" name="domainid"/>
 			</attributes>
 			<queryBases id="domainCostCode_queryBases">
 				<queryBase id="domainCostCode_queryBase_getDomainCostCode" name="getDomainCostCode" queryUri="/oslc/os/oslcalndomain"/>
@@ -868,11 +894,11 @@
 
 		<!-- Tuan-in: add resource to lookup department cost code -->
 		<!-- ALN Domain resource -->
-		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#Location" id="domainDeptCostCode" name="domainDeptCostCode" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
+		<resource describedBy="http://jazz.net/ns/ism/asset/smarter_physical_infrastructure#ALNDOMAIN" additionalData="true" id="domainDeptCostCode" name="domainDeptCostCode" pageSize="1000" providedBy="/oslc/sp/SmarterPhysicalInfrastructure">
 			<attributes id="domainDeptCostCode_attributes">
-				<attribute describedByProperty="spi:description" id="domainDeptCostCode_description_spidescription" index="true" isExactMatchIndex="true" name="description"/>
-				<attribute describedByProperty="spi:value" id="domainDeptCostCode_value_spivalue" index="true" isExactMatchIndex="true" name="value"/>
-				<attribute describedByProperty="spi:domainid" id="domainDeptCostCode_domainid_domainid" index="true" isExactMatchIndex="true" name="domainid"/>
+				<attribute describedByProperty="spi:description" id="domainDeptCostCode_description_spidescription" name="description"/>
+				<attribute describedByProperty="spi:value" id="domainDeptCostCode_value_spivalue" name="value"/>
+				<attribute describedByProperty="spi:domainid" id="domainDeptCostCode_domainid_domainid" name="domainid"/>
 			</attributes>
 			<queryBases id="domainDeptCostCode_queryBases">
 				<queryBase id="domainDeptCostCode_queryBase_getDomainDeptCostCode" name="getDomainDeptCostCode" queryUri="/oslc/os/oslcalndomain"/>
@@ -906,6 +932,11 @@
 				<localAttribute dataType="string" id="issueAdditionalItems_taskid_string" name="taskid"/>
 				<localAttribute dataType="double" id="issueAdditionalItems_issueQty_string" name="issueQty"/>
 				<localAttribute dataType="string" id="issueAdditionalItems_issueTo_string" name="issueTo"/>
+				<!-- Tuan-in: add local data for new fields -->
+				<localAttribute dataType="string" id="issueAdditionalItems_reasonCode_string" name="reasonCode"/>
+				<localAttribute dataType="string" id="issueAdditionalItems_costCode_string" name="costCode"/>
+				<localAttribute dataType="string" id="issueAdditionalItems_deptCostCode_string" name="deptCostCode"/>
+				<!-- Tuan-in: add local data for new fields -->
 			</attributes>
 			<whereClause id="issueAdditionalItems_whereClause"/>
 		</resource>
