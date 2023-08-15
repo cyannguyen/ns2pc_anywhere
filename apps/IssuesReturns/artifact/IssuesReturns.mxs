@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updatescript version="20201116_071044-0500">
+	<app apptype="anywhere" id="issuesReturns">
+		<modify control="IssuesReturns.AdditionalItemsDetailsView_task">
+			<set property="editable" value="true"/>
+		</modify>
+	</app>
+</updatescript>
