@@ -14,14 +14,14 @@
 		<column colspan="3" columnid="item7" id="item6_column"/>
 		<column colspan="3" columnid="item8" id="item8_column"/>
 	</row>
-	<!-- Tuan-in: add new row to show new fiels -->
-	<row id="row_4">
-		<column colspan="3" columnid="item10" id="item10_column"/>
-		<column colspan="3" columnid="item11" id="item11_column"/>
-		<column colspan="3" columnid="item12" id="item12_column"/>
-	</row>
-	<!-- Tuan-out: add new row to show new fiels -->
 	<row id="row_3">
 		<column colspan="9" columnid="item9" id="item9_column"/>
 	</row>
+	<!-- Tuan-in: add new row to show new fiels -->
+	<row id="row_4">
+		<column colspan="4" columnid="item10" id="item10_column"/>
+		<column colspan="4" columnid="item11" id="item11_column"/>
+		<column colspan="4" columnid="item12" id="item12_column"/>
+	</row>
+	<!-- Tuan-out: add new row to show new fiels -->
 </layout>

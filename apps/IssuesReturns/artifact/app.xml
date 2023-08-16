@@ -273,9 +273,9 @@
 					</text>
 
 					<!-- Tuan-in: add new fields -->
-					<text id="IssuesReturns.InvreserveListView_reasonCode" label="Reason Code:" lookup="IssuesReturns.ReasonCodeLookup" lookupAttribute="reasonCode" placeHolder="Tap to enter" resourceAttribute="reasonCode" layoutInsertAt="item10"/>
-					<text id="IssuesReturns.InvreserveListView_costCode" label="Inv Cost Code:" lookup="IssuesReturns.CostCodeLookup" lookupAttribute="costCode" placeHolder="Tap to enter" resourceAttribute="costCode" layoutInsertAt="item11"/>
-					<text id="IssuesReturns.InvreserveListView_deptCostCode" label="Dept Cost Code:" lookup="IssuesReturns.DeptCostCodeLookup" lookupAttribute="deptCostCode" placeHolder="Tap to enter" resourceAttribute="deptCostCode" layoutInsertAt="item12"/>
+					<text id="IssuesReturns.InvreserveListView_reasonCode" editable="false" label="Reason Code:" lookup="IssuesReturns.ReasonCodeLookup" lookupAttribute="reasonCode" placeHolder="Tap to enter" resourceAttribute="reasonCode" layoutInsertAt="item10"/>
+					<text id="IssuesReturns.InvreserveListView_costCode" editable="false" label="Inv Cost Code:" lookup="IssuesReturns.CostCodeLookup" lookupAttribute="costCode" placeHolder="Tap to enter" resourceAttribute="costCode" layoutInsertAt="item11"/>
+					<text id="IssuesReturns.InvreserveListView_deptCostCode" editable="false" label="Dept Cost Code:" lookup="IssuesReturns.DeptCostCodeLookup" lookupAttribute="deptCostCode" placeHolder="Tap to enter" resourceAttribute="deptCostCode" layoutInsertAt="item12"/>
 					<!-- Tuan-out: add new fields -->
 
 					<listtext id="IssuesReturns.InvreserveListView_wonum" layoutInsertAt="item8" resourceAttribute="wonum"/>

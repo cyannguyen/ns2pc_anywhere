@@ -479,6 +479,12 @@ define("application/handlers/IssuesReturnsHandler", [
 
                                     invuseline.set("requestnum", invreserve.requestnum);
 
+                                    // Tuan-in: set new fields data
+                                    invuseline.set("ct_reasoncode", invreserve.reasonCode);
+                                    invuseline.set("ct_invcostcode", invreserve.costCode);
+                                    invuseline.set("ct_deptcostcode", invreserve.deptCostCode);
+                                    // Tuan-out: set new fields data
+
                                     if (invreserve.itemtype == toolItemType) {
                                         if (
                                             invreserve.issueTo !== undefined &&
