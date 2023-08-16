@@ -317,6 +317,12 @@ define("application/handlers/ReturnIssuedItemsHandler", [
                     invuseline.set("gldebitacct", matusetrans.gldebitacct);
                     invuseline.set("glcreditacct", matusetrans.glcreditacct);
                     invuseline.set("unitcost", matusetrans.unitcost);
+                    // Tuan-in: set new fields data
+                    invuseline.set("ct_reasoncode", matusetrans.reasonCode);
+                    invuseline.set("ct_invcostcode", matusetrans.costCode);
+                    invuseline.set("ct_deptcostcode", matusetrans.deptCostCode);
+                    // Tuan-out: set new fields data
+
                     var matusetransidint = matusetrans.matusetransid;
                     invuseline.set("issueid", parseInt(matusetransidint));
                 });

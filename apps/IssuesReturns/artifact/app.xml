@@ -349,6 +349,13 @@
 							<eventHandler class="application.handlers.ReturnIssuedItemsHandler" event="datachange" id="IssuesReturns.IssuedItemsListView_returnQty_eventHandlers_datachange" method="validateQuantity"/>
 						</eventHandlers>
 					</text>
+
+					<!-- Tuan-in: add new fields -->
+					<text id="IssuesReturns.IssuedItemsListView_reasonCode" editable="false" label="Reason Code:" lookup="IssuesReturns.ReasonCodeLookup" lookupAttribute="reasonCode" placeHolder="Tap to enter" resourceAttribute="reasonCode" layoutInsertAt="item10"/>
+					<text id="IssuesReturns.IssuedItemsListView_costCode" editable="false" label="Inv Cost Code:" lookup="IssuesReturns.CostCodeLookup" lookupAttribute="costCode" placeHolder="Tap to enter" resourceAttribute="costCode" layoutInsertAt="item11"/>
+					<text id="IssuesReturns.IssuedItemsListView_deptCostCode" editable="false" label="Dept Cost Code:" lookup="IssuesReturns.DeptCostCodeLookup" lookupAttribute="deptCostCode" placeHolder="Tap to enter" resourceAttribute="deptCostCode" layoutInsertAt="item12"/>
+					<!-- Tuan-out: add new fields -->
+					
 					<!-- <text id="IssuesReturns.IssuedItemsListView_returnflag" layoutInsertAt="flag_cel" label="Check Box"/> -->
 					<checkbox cssClass="rightCheckBox" id="IssuesReturns.IssuedItemsListView_returnflag_checkbox" layoutInsertAt="flag_cel" resourceAttribute="returnindicator"/>
 				</listItemTemplate>
@@ -1004,6 +1011,13 @@
 				<localAttribute dataType="boolean" formula="${rotassetnum} ? true : false" id="matusetrans_rotating" name="rotating"/>
 				<localAttribute dataType="double" formula="(${quantity}*-1) - ${qtyreturned}" id="matusetrans_item_localreturnqty" name="localreturnqty"/>
 				<localAttribute dataType="boolean" id="matusetrans_item_returnindicator" name="returnindicator"/>
+
+				<!-- Tuan-in: add local data for new fields -->
+				<localAttribute dataType="string" id="matusetrans_item_reasonCode_string" name="reasonCode"/>
+				<localAttribute dataType="string" id="matusetrans_item_costCode_string" name="costCode"/>
+				<localAttribute dataType="string" id="matusetrans_item_deptCostCode_string" name="deptCostCode"/>
+				<!-- Tuan-out: add local data for new fields -->
+
 			</attributes>
 			<queryBases id="matusetrans_queryBases">
 				<queryBase id="matusetrans_queryBase_getAllMatUseTrans" name="getAllMatUseTrans" queryUri="/oslc/os/oslcmatusetrans?savedQuery=getWithComplexQuery"/>

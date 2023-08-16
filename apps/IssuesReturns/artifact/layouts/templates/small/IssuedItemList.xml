@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout id="IssuedItemList" version="201508111848" width="100">
+	<!-- Tuan-in: add new row to show new fiels -->
 	<row id="row_0">
-	    <column colspan="1" columnid="id_cel" id="item1_column"/>
-		<column colspan="2" columnid="description_cel" id="item2_column"/>
-		
-		<column colspan="1" columnid="flag_cel" id="item3_column" rowspan="3"/>
+		<column colspan="3" columnid="id_cel" id="item1_column"/>
+		<column colspan="6" columnid="description_cel" id="item2_column"/>
+
+		<column colspan="3" columnid="flag_cel" id="item3_column" rowspan="3"/>
 	</row>
 	<row id="row_1">
-		<column colspan="1" columnid="bin_cel" id="item4_column"/>
-		<column colspan="1" columnid="wonum_cel" id="item5_column"/>
-		
-		<column colspan="1" columnid="return_qty_cel" id="item6_column" rowspan="2"/>
+		<column colspan="3" columnid="bin_cel" id="item4_column"/>
+		<column colspan="3" columnid="wonum_cel" id="item5_column"/>
+
+		<column colspan="3" columnid="return_qty_cel" id="item6_column" rowspan="2"/>
 	</row>
 	<row id="row_2">
-	    <column colspan="1" columnid="rotating_asset_label_cel" id="item7_column"/>
-		<column colspan="1" columnid="rotating_asset_cel" id="item8_column"/>
+		<column colspan="3" columnid="rotating_asset_label_cel" id="item7_column"/>
+		<column colspan="3" columnid="rotating_asset_cel" id="item8_column"/>
 	</row>
+	<row id="row_3">
+		<column colspan="4" columnid="item10" id="item10_column"/>
+		<column colspan="4" columnid="item11" id="item11_column"/>
+		<column colspan="4" columnid="item12" id="item12_column"/>
+	</row>
+	<!-- Tuan-out: add new row to show new fiels -->
 </layout>
