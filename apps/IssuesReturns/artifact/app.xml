@@ -807,6 +807,10 @@
 				<requiredResource id="IssuesReturns.ReasonCodeLookup_workOrder" name="domainReasonCode" reload="true"/>
 			</requiredResources>
 			<list id="IssuesReturns.ReasonCodeLookup_list" resource="domainReasonCode">
+				<searchAttributes id="IssuesReturns.ReasonCodeLookup_list_searchAttributes">
+					<searchAttribute id="IssuesReturns.ReasonCodeLookup_list_searchAttribute_itemnum" name="value"/>
+					<searchAttribute id="IssuesReturns.ReasonCodeLookup_list_searchAttribute_description" name="description"/>
+				</searchAttributes>
 				<listItemTemplate id="IssuesReturns.ReasonCodeLookup_listItemTemplate_Item1Desc1" layout="Item1Desc1">
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.ReasonCodeLookup_Item1Desc1_value" layoutInsertAt="item1" resourceAttribute="value"/>
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.ReasonCodeLookup_Item1Desc1_description" layoutInsertAt="desc1" resourceAttribute="description"/>
@@ -826,6 +830,10 @@
 				<requiredResource id="IssuesReturns.CostCodeLookup_workOrder" name="domainCostCode" reload="true"/>
 			</requiredResources>
 			<list id="IssuesReturns.CostCodeLookup_list" resource="domainCostCode">
+				<searchAttributes id="CostCodeLookup_list_list_searchAttributes">
+					<searchAttribute id="CostCodeLookup_list_list_searchAttribute_itemnum" name="value"/>
+					<searchAttribute id="CostCodeLookup_list_list_searchAttribute_description" name="description"/>
+				</searchAttributes>
 				<listItemTemplate id="IssuesReturns.CostCodeLookup_listItemTemplate_Item1Desc1" layout="Item1Desc1">
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.CostCodeLookup_Item1Desc1_value" layoutInsertAt="item1" resourceAttribute="value"/>
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.CostCodeLookup_Item1Desc1_description" layoutInsertAt="desc1" resourceAttribute="description"/>
@@ -845,6 +853,10 @@
 				<requiredResource id="IssuesReturns.DeptCostCodeLookup_workOrder" name="domainDeptCostCode" reload="true"/>
 			</requiredResources>
 			<list id="IssuesReturns.DeptCostCodeLookup_list" resource="domainDeptCostCode">
+				<searchAttributes id="DeptCostCodeLookup_list_searchAttributes">
+					<searchAttribute id="DeptCostCodeLookup_list_searchAttribute_itemnum" name="value"/>
+					<searchAttribute id="DeptCostCodeLookup_list_searchAttribute_description" name="description"/>
+				</searchAttributes>
 				<listItemTemplate id="IssuesReturns.DeptCostCodeLookup_listItemTemplate_Item1Desc1" layout="Item1Desc1">
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.DeptCostCodeLookup_Item1Desc1_value" layoutInsertAt="item1" resourceAttribute="value"/>
 					<listtext cssClass="bold textappearance-medium" id="IssuesReturns.DeptCostCodeLookup_Item1Desc1_description" layoutInsertAt="desc1" resourceAttribute="description"/>
