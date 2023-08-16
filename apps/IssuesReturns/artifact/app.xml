@@ -1118,6 +1118,12 @@
 				<attribute describedByProperty="spi:requestnum" id="invuselineResource_requestnum_spi_requestnum" name="requestnum"/>
 				<attribute describedByProperty="spi:returnagainstissue" id="invuselineResource_returnagainstissue_spi_returnagainstissue" name="returnagainstissue"/>
 				<attribute describedByProperty="spi:anywhererefid" id="invuselineResource_anywhereRefId_spi_anywhererefid" name="anywhereRefId"/>
+
+				<!-- Tuan-in: add new fields -->
+				<attribute describedByProperty="spi:ct_reasoncode" id="invuselineResource_ct_reasoncode_spi_ct_reasoncode" name="ct_reasoncode"/>
+				<attribute describedByProperty="spi:ct_invcostcode" id="invuselineResource_ct_invcostcode_spi_ct_invcostcode" name="ct_invcostcode"/>
+				<attribute describedByProperty="spi:ct_deptcostcode" id="invuselineResource_ct_deptcostcode_spi_ct_deptcostcode" name="ct_deptcostcode"/>
+				<!-- Tuan-out: add new fields -->
 			</attributes>
 		</resource>
 

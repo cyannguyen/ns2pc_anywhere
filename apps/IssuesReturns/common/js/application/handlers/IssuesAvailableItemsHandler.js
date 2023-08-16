@@ -113,6 +113,12 @@ define("application/handlers/IssuesAvailableItemsHandler", [
             var taskid = additionalItemData.get("taskid");
             var self = this;
 
+			// Tuan-in: get new fields data
+            var reasonCode = additionalItemData.get("reasonCode");
+            var costCode = additionalItemData.get("costCode");
+            var deptCostCode = additionalItemData.get("deptCostCode");
+			// Tuan-in: get new fields data
+
             //validate view, check if required fields are populated
             if (!eventContext.ui.getCurrentViewControl().validate()) {
                 return;
@@ -200,9 +206,11 @@ define("application/handlers/IssuesAvailableItemsHandler", [
                         //invuseline.set('frombin',binnum);
                         invuseline.set("fromlot", lotnum);
 
-                        invuseline.set("wonum", wonum);
-                        invuseline.set("assetnum", asset);
-                        invuseline.set("location", location);
+						// Tuan-in: set new fields data 
+                        invuseline.set("ct_reasoncode", reasonCode);
+                        invuseline.set("ct_invcostcode", costCode);
+                        invuseline.set("ct_deptcostcode", deptCostCode);
+						// Tuan-out: set new fields data 
 
                         if (itemType == toolItemType && !issueTo) {
                             var msg = MessageService.createResolvedMessage("issueToRequired", [
@@ -658,12 +666,12 @@ define("application/handlers/IssuesAvailableItemsHandler", [
             issueAdditionItemRecord.wonum = "";
             issueAdditionItemRecord.issueQty = "";
 
-            // Tuan-in: clear new fields
-            issueAdditionItemRecord.reasonCode = "";
+			// Tuan-in: clear new fields
+			issueAdditionItemRecord.reasonCode = "";
             issueAdditionItemRecord.costCode = "";
             issueAdditionItemRecord.deptCostCode = "";
-            // Tuan-out: clear new fields
-
+			// Tuan-out: clear new fields
+			
             this.clearBaseFieldsFromWO(eventContext);
             this.clearUnreservedSearchFields(eventContext);
             eventContext.ui.hideCurrentView(PlatformConstants.CLEANUP);
