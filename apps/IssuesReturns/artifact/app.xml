@@ -272,6 +272,12 @@
 						</eventHandlers>
 					</text>
 
+					<!-- Tuan-in: add new fields -->
+					<text id="IssuesReturns.InvreserveListView_reasonCode" label="Reason Code:" lookup="IssuesReturns.ReasonCodeLookup" lookupAttribute="reasonCode" placeHolder="Tap to enter" resourceAttribute="reasonCode" layoutInsertAt="item10"/>
+					<text id="IssuesReturns.InvreserveListView_costCode" label="Inv Cost Code:" lookup="IssuesReturns.CostCodeLookup" lookupAttribute="costCode" placeHolder="Tap to enter" resourceAttribute="costCode" layoutInsertAt="item11"/>
+					<text id="IssuesReturns.InvreserveListView_deptCostCode" label="Dept Cost Code:" lookup="IssuesReturns.DeptCostCodeLookup" lookupAttribute="deptCostCode" placeHolder="Tap to enter" resourceAttribute="deptCostCode" layoutInsertAt="item12"/>
+					<!-- Tuan-out: add new fields -->
+
 					<listtext id="IssuesReturns.InvreserveListView_wonum" layoutInsertAt="item8" resourceAttribute="wonum"/>
 				</listItemTemplate>
 			</list>
@@ -948,7 +954,7 @@
 				<localAttribute dataType="string" id="issueAdditionalItems_reasonCode_string" name="reasonCode"/>
 				<localAttribute dataType="string" id="issueAdditionalItems_costCode_string" name="costCode"/>
 				<localAttribute dataType="string" id="issueAdditionalItems_deptCostCode_string" name="deptCostCode"/>
-				<!-- Tuan-in: add local data for new fields -->
+				<!-- Tuan-out: add local data for new fields -->
 			</attributes>
 			<whereClause id="issueAdditionalItems_whereClause"/>
 		</resource>
@@ -1031,6 +1037,13 @@
 				<localAttribute dataType="string" id="invreserveResource_localreservation2" name="tasklabel"/>
 				<localAttribute dataType="string" formula="${binnum}" id="invreserveResource_localbin" name="localsortbin"/>
 				<localAttribute dataType="string" id="invreserveResource_issueto" name="issueTo"/>
+
+				<!-- Tuan-in: add local data for new fields -->
+				<localAttribute dataType="string" id="invreserveResource_reasonCode_string" name="reasonCode"/>
+				<localAttribute dataType="string" id="invreserveResource_costCode_string" name="costCode"/>
+				<localAttribute dataType="string" id="invreserveResource_deptCostCode_string" name="deptCostCode"/>
+				<!-- Tuan-out: add local data for new fields -->
+
 			</attributes>
 			<creationFactories id="invreserveResource_creationFactories">
 				<creationFactory creationUri="/oslc/os/oslcinvreserve" id="invreserveResource_creationFactory_invreserveResourceCF" name="invreserveResourceCF"/>
