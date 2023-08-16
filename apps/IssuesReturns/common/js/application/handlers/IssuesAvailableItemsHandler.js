@@ -657,6 +657,13 @@ define("application/handlers/IssuesAvailableItemsHandler", [
             issueAdditionItemRecord.issueTo = "";
             issueAdditionItemRecord.wonum = "";
             issueAdditionItemRecord.issueQty = "";
+
+            // Tuan-in: clear new fields
+            issueAdditionItemRecord.reasonCode = "";
+            issueAdditionItemRecord.costCode = "";
+            issueAdditionItemRecord.deptCostCode = "";
+            // Tuan-out: clear new fields
+
             this.clearBaseFieldsFromWO(eventContext);
             this.clearUnreservedSearchFields(eventContext);
             eventContext.ui.hideCurrentView(PlatformConstants.CLEANUP);
