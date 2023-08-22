@@ -87,8 +87,8 @@ function(declare, ApplicationHandlerBase, AdditionalDataManager, SystemDataManag
 			}
 
 			// Tuan-in: Set default login
-			loginForm.set(authkey1, "maxadmin");
-			loginForm.set(authkey2, "Avenue@NS2PC2022");
+			// loginForm.set(authkey1, "maxadmin");
+			// loginForm.set(authkey2, "Avenue@NS2PC2022");
 			// Tuan-in: Set default login
 			
 			var appName = MessageService.createStaticMessage('applicationName').getMessage();
